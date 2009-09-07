@@ -1,0 +1,35 @@
+<tal:photoalbum-view>
+  <h1 tal:content="context/title" />
+
+  <div class="photo-album"
+       tal:condition="view/contents">   
+
+  <div class="gallery-thumbs">
+    <ul class="thumbs noscript">
+      <tal:thumbs repeat="content view/contents">
+	<li>
+	  <span class="clipout" tal:define="url content/@@absolute_url">
+	    <a class="thumb clipin image-link"
+	       tal:attributes="href string:$url/++thumbnail++image.preview;
+			       alt content/title;
+			       title content/title;
+			       rel string:gallery-${view/uid}">
+	      <img src=""
+		   tal:attributes="src string:$url/++thumbnail++image.thumb;
+				   alt content/title;"
+		   />
+	    </a>
+	  </span>
+	</li>
+      </tal:thumbs>
+    </ul>
+  </div>
+</div>
+
+<p class="discreet"
+   tal:condition="not: view/contents"
+   i18n:translate="description_no_items_in_folder">
+  There are currently no images in this photo album.
+</p>
+
+</tal:photoalbum-view>
