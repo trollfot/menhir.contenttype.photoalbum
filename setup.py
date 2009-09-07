@@ -4,7 +4,7 @@ from os.path import join
 name = 'menhir.contenttype.photoalbum'
 version = '0.1'
 readme = open("src/menhir/contenttype/photoalbum/README.txt").read()
-history = open("HISTORY.txt").read()
+history = open("docs/HISTORY.txt").read()
 
 setup(name = name,
       version = version,
