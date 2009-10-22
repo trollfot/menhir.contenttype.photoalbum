@@ -6,22 +6,19 @@
 
   <div class="gallery-thumbs">
     <ul class="thumbs noscript">
-      <tal:thumbs repeat="content view/contents">
-	<li>
-	  <span class="clipout" tal:define="url content/@@absolute_url">
-	    <a class="thumb clipin image-link"
-	       tal:attributes="href string:$url/++thumbnail++image.preview;
-			       alt content/title;
-			       title content/title;
-			       rel string:gallery-${view/uid}">
-	      <img src=""
-		   tal:attributes="src string:$url/++thumbnail++image.thumb;
-				   alt content/title;"
-		   />
-	    </a>
-	  </span>
-	</li>
-      </tal:thumbs>
+      <li tal:repeat="content view/contents">
+	<a class="thumb image-link"
+	   tal:define="url content/@@absolute_url"
+	   tal:attributes="href string:$url/++thumbnail++image.preview;
+			   alt content/title;
+			     title content/title;
+			     rel string:gallery-${view/uid}">
+	  <img src=""
+	       tal:attributes="src string:$url/++thumbnail++image.square;
+			       alt content/title;"
+		 />
+	</a>
+      </li>
     </ul>
   </div>
 </div>

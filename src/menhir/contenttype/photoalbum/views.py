@@ -4,7 +4,7 @@ import grok
 import zope.app.intid
 import megrok.resourcelibrary
 from zope.component import getUtility
-from dolmen.app.layout import View
+from dolmen.app.viewselector import AlternateView
 from menhir.library.jquery import JQueryBase
 from menhir.contenttype.image import ImagePopup
 from menhir.contenttype.photoalbum import IPhotoAlbum
@@ -26,7 +26,7 @@ class SimpleGallery(megrok.resourcelibrary.ResourceLibrary):
     megrok.resourcelibrary.include('gallery.css')
 
 
-class Animated(View):
+class Animated(AlternateView):
     grok.context(IPhotoAlbum)
     grok.name('gallery_view')
     grok.title('Animated gallery')
@@ -37,7 +37,7 @@ class Animated(View):
         self.contents = self.context.values()
 
 
-class Simple(View):
+class Simple(AlternateView):
     grok.context(IPhotoAlbum)
     grok.name('thumbnails_view')
     grok.title('Simple gallery')
