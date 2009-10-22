@@ -3,12 +3,12 @@
 
 import dolmen.content as content
 from menhir.contenttype.image import IImage
-from dolmen.app.content import IDynamicLayout
+from dolmen.app.viewselector import IViewSelector
 from zope.interface import implements
 from zope.app.container.constraints import contains
 
 
-class IPhotoAlbum(IDynamicLayout):
+class IPhotoAlbum(IViewSelector):
     """Defines a folder that can only contain IImage providing objects.
     """
     contains(IImage)
