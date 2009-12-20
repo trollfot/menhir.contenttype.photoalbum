@@ -3,6 +3,7 @@
 
   <include package="dolmen.app.viewselector" />  
   <include package="dolmen.content" file="meta.zcml"/>
+  <include package="hurry.jquery" />
   <include package="megrok.resourcelibrary" file="meta.zcml" />
   <grok:grok package="." />
 

@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 
 import dolmen.content as content
-from zope.interface import implements
-from zope.app.container.constraints import contains
-from menhir.contenttype.image import IImage
 from dolmen.app.viewselector import IViewSelector
+from menhir.contenttype.image import IImage
+
+from zope.interface import implements
+from zope.container.constraints import contains
 
 
 class IPhotoAlbum(IViewSelector):
