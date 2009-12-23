@@ -3,7 +3,7 @@
 import grokcore.component as grok
 
 from dolmen.app.viewselector import AlternateView
-from menhir.contenttype import photoalbum
+from menhir.contenttype import image, photoalbum
 
 from zope.component import getUtility
 from zope.intid.interfaces import IIntIds
@@ -26,6 +26,7 @@ class Simple(AlternateView):
     grok.context(photoalbum.IPhotoAlbum)
     
     def update(self):
+        image.ImagePopup.need()
         photoalbum.gallery_css.need()
         self.contents = self.context.values()
         self.uid = getUtility(IIntIds).queryId(self.context)

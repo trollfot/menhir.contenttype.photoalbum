@@ -1,10 +1,14 @@
-from setuptools import setup, find_packages
-from os.path import join
+# -*- coding: utf-8 -*-
 
-name = 'menhir.contenttype.photoalbum'
+from os.path import join
+from setuptools import setup, find_packages
+
 version = '0.1'
-readme = open("src/menhir/contenttype/photoalbum/README.txt").read()
-history = open("docs/HISTORY.txt").read()
+name = 'menhir.contenttype.photoalbum'
+
+history = open(join('docs', 'HISTORY.txt')).read()
+readme = open(
+    join('src', 'menhir', 'contenttype', 'photoalbum', 'README.txt')).read()
 
 setup(name = name,
       version = version,
@@ -23,20 +27,23 @@ setup(name = name,
       platforms = 'Any',
       zip_safe = False,
       install_requires=[
-          'setuptools',
-          'grok',
+          'dolmen.app.viewselector',
           'dolmen.content',
-          'dolmen.thumbnailer',
+          'grokcore.component',
           'hurry.jquery',
           'megrok.resource',
-      ],
+          'menhir.contenttype.image',
+          'setuptools',
+          'zope.component',
+          'zope.intid'
+          ],
       classifiers = [
-        'Development Status :: 4 - Beta',
-        'Environment :: Web Environment',
-        'Framework :: Grok',
-        'Intended Audience :: Other Audience',
-        'License :: OSI Approved :: GNU General Public License (GPL)',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python',
-      ],
-)
+          'Development Status :: 4 - Beta',
+          'Environment :: Web Environment',
+          'Framework :: Grok',
+          'Intended Audience :: Other Audience',
+          'License :: OSI Approved :: GNU General Public License (GPL)',
+          'Operating System :: OS Independent',
+          'Programming Language :: Python',
+          ],
+      )
