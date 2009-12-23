@@ -1,10 +1,12 @@
 <configure xmlns="http://namespaces.zope.org/zope"
            xmlns:grok="http://namespaces.zope.org/grok">
 
-  <include package="dolmen.app.viewselector" />  
   <include package="dolmen.content" file="meta.zcml"/>
+
+  <include package="dolmen.app.viewselector" />  
   <include package="hurry.jquery" />
-  <include package="megrok.resourcelibrary" file="meta.zcml" />
+  <include package="megrok.resource" />
+
   <grok:grok package="." />
 
 </configure>
