@@ -6,6 +6,7 @@
   <include package="dolmen.app.viewselector" />  
   <include package="hurry.jquery" />
   <include package="megrok.resource" />
+  <include package="menhir.contenttype.image" />
 
   <grok:grok package="." />
 
