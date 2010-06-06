@@ -2,14 +2,16 @@
 
 import grokcore.component as grok
 
-from dolmen.app.viewselector import AlternativeView
+from dolmen import menu
+from dolmen.app.layout import Page
+from dolmen.app.viewselector import SelectableViewsMenu
 from menhir.contenttype import image, photoalbum
-
 from zope.component import getUtility
 from zope.intid.interfaces import IIntIds
 
 
-class Animated(AlternativeView):
+@menu.menuentry(SelectableViewsMenu)
+class Animated(Page):
     grok.name('gallery_view')
     grok.title('Animated gallery')
     grok.context(photoalbum.IPhotoAlbum)
@@ -20,7 +22,8 @@ class Animated(AlternativeView):
         self.contents = self.context.values()
 
 
-class Simple(AlternativeView):
+@menu.menuentry(SelectableViewsMenu)
+class Simple(Page):
     grok.name('thumbnails_view')
     grok.title('Simple gallery')
     grok.context(photoalbum.IPhotoAlbum)
