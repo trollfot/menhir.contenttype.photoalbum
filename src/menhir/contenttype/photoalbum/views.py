@@ -9,11 +9,12 @@ from menhir.contenttype import image, photoalbum
 from zope.component import getUtility
 from zope.intid.interfaces import IIntIds
 
+from menhir.contenttype.photoalbum import MCPMessageFactory as _
 
 @menu.menuentry(SelectableViewsMenu)
 class Animated(Page):
     grok.name('gallery_view')
-    grok.title('Animated gallery')
+    grok.title(_('label_animatedgallery', default=u"Animated gallery"))
     grok.context(photoalbum.IPhotoAlbum)
     
     def update(self):
@@ -25,7 +26,7 @@ class Animated(Page):
 @menu.menuentry(SelectableViewsMenu)
 class Simple(Page):
     grok.name('thumbnails_view')
-    grok.title('Simple gallery')
+    grok.title(_('label_simplegallery', default=u"Simple gallery"))
     grok.context(photoalbum.IPhotoAlbum)
     
     def update(self):

@@ -8,7 +8,7 @@ from dolmen.app.viewselector import IViewSelector
 from menhir.contenttype.image import IImage
 from zope.interface import implements
 from zope.container.constraints import contains
-
+from menhir.contenttype.photoalbum import MCPMessageFactory as _
 
 class IPhotoAlbum(IViewSelector):
     """Defines a folder that can only contain IImage providing objects.
@@ -20,7 +20,7 @@ class PhotoAlbum(content.OrderedContainer):
     """A folder that contains images.
     """
     icon("resources/album.png")
-    content.name(u"Photo album")
+    content.name(_(u"Photo album"))
 
     implements(IPhotoAlbum)
     selected_view = u"thumbnails_view"

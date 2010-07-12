@@ -25,6 +25,7 @@
 
 <p class="discreet"
    tal:condition="not: view/contents"
+   i18n:domain="menhir.contenttype.photoalbum"
    i18n:translate="description_no_items_in_folder">
   There are currently no images in this photo album.
 </p>
