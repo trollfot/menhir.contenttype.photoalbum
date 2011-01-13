@@ -36,7 +36,7 @@ setup(name = name,
           'fanstatic',
           'grokcore.component',
           'js.jquery',
-          'menhir.contenttype.image',
+          'menhir.contenttype.image >= 0.3',
           'setuptools',
           'zope.component',
           'zope.intid'
