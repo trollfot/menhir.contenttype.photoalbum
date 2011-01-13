@@ -1,19 +1,16 @@
 # -*- coding: utf-8 -*-
 
-from hurry.jquery import jquery
-from megrok import resource
+from fanstatic import Resource, Library
+from js.jquery import jquery
 
 
-class GalleryResources(resource.Library):
-    resource.path('resources')
-    resource.name("photoalbum.resources")
+GalleryResources = Library("photoalbum.resources", 'resources')
 
-
-gallery_css = resource.ResourceInclusion(
+gallery_css = Resource(
     GalleryResources, "gallery.css")
 
-gallerific = resource.ResourceInclusion(
+gallerific = Resource(
     GalleryResources, "jquery.galleriffic.min.js", depends=[jquery])
 
-animated_gallery = resource.ResourceInclusion(
+animated_gallery = Resource(
     GalleryResources, "gallery.js", depends=[gallerific, gallery_css])

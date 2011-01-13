@@ -10,6 +10,8 @@ history = open(join('docs', 'HISTORY.txt')).read()
 readme = open(
     join('src', 'menhir', 'contenttype', 'photoalbum', 'README.txt')).read()
 
+tests_require = []
+
 setup(name = name,
       version = version,
       description = 'Dolmen contenttype extension : photoalbum',
@@ -26,12 +28,14 @@ setup(name = name,
       include_package_data = True,
       platforms = 'Any',
       zip_safe = False,
+      tests_require = tests_require,
+      extras_require = {'test': tests_require},
       install_requires=[
           'dolmen.app.viewselector',
           'dolmen.content',
+          'fanstatic',
           'grokcore.component',
-          'hurry.jquery',
-          'megrok.resource',
+          'js.jquery',
           'menhir.contenttype.image',
           'setuptools',
           'zope.component',
