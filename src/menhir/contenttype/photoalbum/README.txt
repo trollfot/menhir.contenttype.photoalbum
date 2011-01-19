@@ -116,19 +116,19 @@ Thumbnails view
     <div class="gallery-thumbs">
        <ul class="thumbs noscript">
          <li>
-    	   <a class="thumb image-link" alt="Logo"
+    	   <a class="thumb image-link" 
               href="http://127.0.0.1/album/dolmen_logo/++thumbnail++image.preview"
-              rel="gallery-None" title="Logo">
+              title="Logo" rel="gallery-None">
     	      <img src="http://127.0.0.1/album/dolmen_logo/++thumbnail++image.square"
-                   alt="Logo" />
+                   title="Logo" alt="Logo" />
     	   </a>
         </li>
         <li>
-    	   <a class="thumb image-link" alt="Example"
+    	   <a class="thumb image-link"
               href="http://127.0.0.1/album/dolmen_site_example/++thumbnail++image.preview"
-              rel="gallery-None" title="Example">
+              title="Example" rel="gallery-None">
     	      <img src="http://127.0.0.1/album/dolmen_site_example/++thumbnail++image.square"
-                   alt="Example" />
+                   title="Example" alt="Example" />
     	  </a>
         </li>
       </ul>
@@ -160,18 +160,20 @@ Animated view
     <div class="gallery-thumbs navigation">
       <ul class="thumbs noscript">
         <li style="opacity: 0.67">
-    	  <a class="thumb" alt="Logo"
-             href="http://127.0.0.1/album/dolmen_logo/++thumbnail++image.preview">
+    	  <a class="thumb"
+             href="http://127.0.0.1/album/dolmen_logo/++thumbnail++image.preview"
+	     title="Logo">
   	     <img src="http://127.0.0.1/album/dolmen_logo/++thumbnail++image.square"
-                  alt="Logo" />
+                  title="Logo" alt="Logo" />
     	  </a>
     	  <div class="caption">Logo</div>
     	</li>
     	<li style="opacity: 0.67">
-    	  <a class="thumb" alt="Example"
-             href="http://127.0.0.1/album/dolmen_site_example/++thumbnail++image.preview">
+    	  <a class="thumb"
+             href="http://127.0.0.1/album/dolmen_site_example/++thumbnail++image.preview"
+	     title="Example">
     	     <img src="http://127.0.0.1/album/dolmen_site_example/++thumbnail++image.square"
-                  alt="Example" />
+                  title="Example" alt="Example" />
     	  </a>
     	  <div class="caption">Example</div>
     	</li>

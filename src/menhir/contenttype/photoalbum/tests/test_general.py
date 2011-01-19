@@ -43,13 +43,13 @@ class TestLayer(ZopeFanstaticBrowserLayer):
 
         # Register some needed utilities
         zope.component.provideUtility(IntIds(), IIntIds)
-        
+
         zope.component.provideAdapter(
             connectionOfPersistent, (IPersistent,), IConnection)
-        
+
         zope.component.provideAdapter(
             KeyReferenceToPersistent, (IPersistent,), IKeyReference)
-        
+
         security.newInteraction(Participation(Principal('zope.mgr')))
 
     def tearDown(self):
@@ -57,7 +57,7 @@ class TestLayer(ZopeFanstaticBrowserLayer):
         zope.component.hooks.setSite()
         security.endInteraction()
         ZopeFanstaticBrowserLayer.tearDown(self)
-    
+
     def setup_middleware(self, app):
         return fanstatic.Injector(app)
 

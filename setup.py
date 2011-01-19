@@ -11,7 +11,20 @@ readme = open(
     join('src', 'menhir', 'contenttype', 'photoalbum', 'README.txt')).read()
 
 tests_require = [
+    "ZODB3",
+    "zope.annotation",
+    "zope.app.appsetup",
+    "zope.app.publication",
+    "zope.browserpage",
+    "zope.dublincore",
     "zope.fanstatic",
+    "zope.keyreference",
+    "zope.principalregistry",
+    "zope.publisher",
+    "zope.security",
+    "zope.securitypolicy",
+    "zope.site",
+    "zope.traversing",
     ]
 
 setup(name = name,
@@ -42,6 +55,7 @@ setup(name = name,
           'fanstatic',
           'grokcore.component',
           'js.galleriffic',
+          'megrok.chameleon',
           'menhir.contenttype.image >= 0.3',
           'setuptools',
           'zope.component',
