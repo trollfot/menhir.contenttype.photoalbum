@@ -118,7 +118,7 @@ Thumbnails view
          <li>
     	   <a class="thumb image-link" 
               href="http://127.0.0.1/album/dolmen_logo/++thumbnail++image.preview"
-              title="Logo" rel="gallery-None">
+              title="Logo" rel="gallery-...">
     	      <img src="http://127.0.0.1/album/dolmen_logo/++thumbnail++image.square"
                    title="Logo" alt="Logo" />
     	   </a>
@@ -126,7 +126,7 @@ Thumbnails view
         <li>
     	   <a class="thumb image-link"
               href="http://127.0.0.1/album/dolmen_site_example/++thumbnail++image.preview"
-              title="Example" rel="gallery-None">
+              title="Example" rel="gallery-...">
     	      <img src="http://127.0.0.1/album/dolmen_site_example/++thumbnail++image.square"
                    title="Example" alt="Example" />
     	  </a>
