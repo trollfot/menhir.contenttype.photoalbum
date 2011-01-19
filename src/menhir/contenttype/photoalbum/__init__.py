@@ -4,5 +4,4 @@ MCPMessageFactory = MessageFactory('menhir.contenttype.photoalbum')
 
 from menhir.contenttype.photoalbum.album import IPhotoAlbum, PhotoAlbum
 from menhir.contenttype.photoalbum.libraries import (
-    gallery_css, gallerific, animated_gallery)
-
+    gallery_css, galleriffic, animated_gallery)

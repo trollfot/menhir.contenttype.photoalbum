@@ -6,6 +6,7 @@
   <include package="dolmen.content" file="meta.zcml"/>
 
   <include package="dolmen.app.content" /> 
+  <include package="dolmen.app.security" />
   <include package="dolmen.app.viewselector" />  
   <include package="menhir.contenttype.image" />
 

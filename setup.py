@@ -10,7 +10,9 @@ history = open(join('docs', 'HISTORY.txt')).read()
 readme = open(
     join('src', 'menhir', 'contenttype', 'photoalbum', 'README.txt')).read()
 
-tests_require = []
+tests_require = [
+    "zope.fanstatic",
+    ]
 
 setup(name = name,
       version = version,
@@ -19,7 +21,7 @@ setup(name = name,
       keywords = 'Grok Zope3 CMS Dolmen',
       author = 'Souheil Chelfouh',
       author_email = 'trollfot@gmail.com',
-      url = 'http://tracker.trollfot.org/',
+      url = 'http://www.dolmen-project.org',
       download_url = '',
       license = 'GPL',
       packages=find_packages('src', exclude=['ez_setup']),
@@ -31,15 +33,23 @@ setup(name = name,
       tests_require = tests_require,
       extras_require = {'test': tests_require},
       install_requires=[
+          'dolmen.app.content',
+          'dolmen.app.layout',
+          'dolmen.app.security',
           'dolmen.app.viewselector',
           'dolmen.content',
+          'dolmen.menu',
           'fanstatic',
           'grokcore.component',
-          'js.jquery',
+          'js.galleriffic',
           'menhir.contenttype.image >= 0.3',
           'setuptools',
           'zope.component',
-          'zope.intid'
+          'zope.container',
+          'zope.i18n',
+          'zope.i18nmessageid',
+          'zope.interface',
+          'zope.intid',
           ],
       classifiers = [
           'Development Status :: 4 - Beta',
