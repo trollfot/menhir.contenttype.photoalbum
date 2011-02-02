@@ -182,8 +182,8 @@ Animated view
     <div class="gallery">
       <div class="controls"></div>
       <div class="loader"></div>
-      <div class="main-image"></div>
-      <div class="captions"></div>
+      <div class="slideshow"></div>
+      <div class="caption"></div>
     </div>    
     <div class="gallery-footer" />
   </div>
