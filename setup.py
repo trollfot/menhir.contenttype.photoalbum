@@ -3,7 +3,7 @@
 from os.path import join
 from setuptools import setup, find_packages
 
-version = '0.2'
+version = '0.3'
 name = 'menhir.contenttype.photoalbum'
 
 history = open(join('docs', 'HISTORY.txt')).read()
@@ -54,7 +54,7 @@ setup(name = name,
           'dolmen.menu',
           'fanstatic',
           'grokcore.component',
-          'js.galleriffic',
+          'js.galleriffic >= 2.0.1-1',
           'megrok.chameleon',
           'menhir.contenttype.image >= 0.3',
           'setuptools',
