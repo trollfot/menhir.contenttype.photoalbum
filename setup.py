@@ -3,7 +3,7 @@
 from os.path import join
 from setuptools import setup, find_packages
 
-version = '0.3'
+version = '0.4'
 name = 'menhir.contenttype.photoalbum'
 
 history = open(join('docs', 'HISTORY.txt')).read()
@@ -46,17 +46,17 @@ setup(name = name,
       tests_require = tests_require,
       extras_require = {'test': tests_require},
       install_requires=[
-          'dolmen.app.content',
+          'dolmen.app.content >= 1.0b1',
           'dolmen.app.layout',
           'dolmen.app.security',
           'dolmen.app.viewselector',
-          'dolmen.content',
+          'dolmen.content >= 0.7',
           'dolmen.menu',
           'fanstatic',
           'grokcore.component',
           'js.galleriffic >= 2.0.1-1',
           'megrok.chameleon',
-          'menhir.contenttype.image >= 0.3',
+          'menhir.contenttype.image >= 0.4',
           'setuptools',
           'zope.component',
           'zope.container',

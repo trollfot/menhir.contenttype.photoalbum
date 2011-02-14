@@ -10,19 +10,30 @@ thumbnails or as an animated gallery.
 Interfaces
 ==========
 
-The ``menhir.contenttype.photoalbum`` `IPhotoAlbum` interface extendes
-`IContainer` from ``zope.container``::
+The ``menhir.contenttype.photoalbum`` `IPhotoAlbum` interface extends
+`IDescriptiveSchema` from ``dolmen.app.content`` and `IContainer` from
+``zope.container``::
 
   >>> from zope.container.interfaces import IContainer
+  >>> from dolmen.app.content import IDescriptiveSchema
   >>> from menhir.contenttype.photoalbum import IPhotoAlbum
 
   >>> IPhotoAlbum.isOrExtends(IContainer)
   True
 
-The `IPhotoAlbum` interface defines a containership contraint,
+  >>> IPhotoAlbum.isOrExtends(IDescriptiveSchema)
+  True
+
+This interface is applied as a schema for the `PhotoAlbum`::
+
+  >>> from dolmen.content import schema
+  >>> from menhir.contenttype.photoalbum import PhotoAlbum
+  >>> schema.bind().get(PhotoAlbum)
+  [<InterfaceClass menhir.contenttype.photoalbum.album.IPhotoAlbum>]
+
+The `IPhotoAlbum` interface defines a containership constraint,
 allowing only `IImage` contents, from ``menhir.contenttype.image``::
 
-  >>> from menhir.contenttype.photoalbum import PhotoAlbum
   >>> album = PhotoAlbum(title=u"My nice images")
 
   >>> from zope.container.constraints import checkObject

@@ -3,16 +3,17 @@
 
 import dolmen.content as content
 
-from dolmen.app.content import icon
+from dolmen.app.content import icon, IDescriptiveSchema
+from dolmen.app.security import CanAddContent
 from dolmen.app.viewselector import IViewSelector
 from menhir.contenttype.image import IImage
-from zope.interface import implements
-from zope.container.interfaces import IContainer
-from zope.container.constraints import contains
 from menhir.contenttype.photoalbum import MCPMessageFactory as _
+from zope.container.constraints import contains
+from zope.container.interfaces import IContainer
+from zope.interface import implements
 
 
-class IPhotoAlbum(IContainer):
+class IPhotoAlbum(IDescriptiveSchema, IContainer):
     """Defines a folder that can only contain IImage providing objects.
     """
     contains(IImage)
@@ -23,7 +24,8 @@ class PhotoAlbum(content.OrderedContainer):
     """
     icon("resources/album.png")
     content.name(_(u"Photo album"))
-    content.require("dolmen.content.Add")
+    content.require(CanAddContent)
+    content.schema(IPhotoAlbum)
 
-    implements(IPhotoAlbum, IViewSelector)
+    implements(IViewSelector)
     selected_view = u"thumbnails_view"
